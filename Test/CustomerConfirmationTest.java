@@ -11,9 +11,15 @@ class CustomerConfirmationTest {
         assertEquals("James", custConfirmation.getCustConfirmation());
 
         custConfirmation.setCustName("Robert");
-        custConfirmation.setCustConfirmation("ABCDEF");
+        custConfirmation.setCustConfirmation("ABCDAF");
 
         assertEquals("Robert", custConfirmation.getCustName());
-        assertEquals("ABCDEF", custConfirmation.getCustConfirmation());
+        assertEquals("ABCDAF", custConfirmation.getCustConfirmation());
     }
+
+    @Test
+    void testConstructorPreCondition(){
+        CustomerConfirmation cc =  new CustomerConfirmation("", "James");
+    }
+
 }
